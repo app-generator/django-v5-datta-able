@@ -110,42 +110,22 @@ At this point, the app runs at `http://127.0.0.1:8000/`.
 
 <br />
 
-### 👉 Set Up for `Windows` 
+## **Deploy on Render**
 
-> Install modules via `VENV` (windows) 
+- Create a Blueprint instance
+  - Go to https://dashboard.render.com/blueprints this link.
+- Click `New Blueprint Instance` button.
+- Connect your `repo` which you want to deploy.
+- Fill the `Service Group Name` and click on the `Update Existing Resources` button.
+- Edit the Environment and [specify the PYTHON_VERSION](https://render.com/docs/python-version)
+  - Version `3.11.5` was used for **[this deployment](https://django-v5-datta.onrender.com/)**
+- After that, your deployment will start automatically.
 
-```
-$ virtualenv env
-$ .\env\Scripts\activate
-$ pip3 install -r requirements.txt
-```
-
-<br />
-
-> Set Up Database
-
-```bash
-$ python manage.py makemigrations
-$ python manage.py migrate
-```
+At this point, the product should be LIVE.
 
 <br />
 
-> Start the APP
-
-```bash
-$ python manage.py createsuperuser # create the admin
-$ python manage.py runserver       # start the project
-```
-
-
-At this point, the app runs at `http://127.0.0.1:8000/`. 
-
-<br />
-
-<br />
-
-## Codebase Structure
+## `Codebase` Structure
 
 The project is coded using a simple and intuitive structure presented below:
 
@@ -228,21 +208,6 @@ By default, this file is unused because the `theme` expects `index.html` (withou
 In order to use it, simply rename it to `index.html`. Like this, the default version shipped in the library is ignored by Django. 
 
 In a similar way, all other files and components can be customized easily.
-
-<br />
-
-## Deploy on [Render](https://render.com/)
-
-- Create a Blueprint instance
-  - Go to https://dashboard.render.com/blueprints this link.
-- Click `New Blueprint Instance` button.
-- Connect your `repo` which you want to deploy.
-- Fill the `Service Group Name` and click on the `Update Existing Resources` button.
-- Edit the Environment and [specify the PYTHON_VERSION](https://render.com/docs/python-version)
-  - Version `3.11.5` was used for [this deployment](https://django-v5-datta.onrender.com/) 
-- After that, your deployment will start automatically.
-
-At this point, the product should be LIVE.
 
 <br />
 
