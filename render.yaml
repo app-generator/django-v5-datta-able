@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: django-datta
+    name: django-v5-datta
     plan: starter
     env: python
     region: frankfurt  # region should be same as your database region.
